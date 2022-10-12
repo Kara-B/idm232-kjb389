@@ -1,6 +1,7 @@
 
-    <footer> 
-    </footer>
+</main>
+<footer> 
+</footer>
 </body>
 
 </html>
