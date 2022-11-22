@@ -50,7 +50,6 @@ $result = mysqli_query($db_connection, $query);
       <form action="" method="GET">
         <input type="text" name = "Search">
         <button type="submit"> Search </button> 
-
       </form>
 
     <div class="adminTable">

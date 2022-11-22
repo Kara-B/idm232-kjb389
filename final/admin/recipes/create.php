@@ -41,17 +41,17 @@ $result = mysqli_query($db_connection, $query);
         <input type="number" name="serving_size">
     </div>
 
-    <div class="addrecipeInput">
+    <div class="addrecipeInput js-tinymce">
         <label for=""> Description </label>
-        <input type="text" name="description">
+        <textarea type="text" name="description"> </textarea>
     </div>
 
-    <div class="addrecipeInput">
+    <div class="addrecipeInput js-tinymce">
         <label for=""> Ingredients </label>
         <input type="text" name="ingredients">
     </div>
 
-    <div class="addrecipeInput">
+    <div class="addrecipeInput js-tinymce">
         <label for=""> Instructions </label>
         <input type="text" name="instructions">
     </div>

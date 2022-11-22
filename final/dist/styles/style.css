@@ -143,6 +143,7 @@ header {
   height: 100px;
   padding: 2rem;
   max-width: 100%;
+  margin: 0 0 1.5rem 0;
 }
 
 img.headerLogo {
@@ -221,6 +222,10 @@ footer {
   background-color: var(--tasty-red);
   color: #ffffff;
   margin: 1.5rem 0 0;
+  padding: 1rem ;
+  position: static;
+  bottom: 0;
+  width: 100%;
 }
 
 .footerLogo {
@@ -394,6 +399,11 @@ input[type=submit]{
   object-fit: cover;
 }
 
+
+.searchBox{
+  display: box;
+  margin: 1rem;
+}
 
 
 

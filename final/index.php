@@ -6,6 +6,17 @@ include_once __DIR__ . '/_components/header.php';
     <div class="hero">
         <img  src=" <?php echo site_url(); ?>/dist/images/banh-mi-with-grilled-pork.jpg" alt="Tasty Times Banner" >
     </div> 
+
+
+    <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
+                <div>
+                    <input class="searchText" type="text" placeholder="Search..." name="search">
+                    <button class="searchButtonSec">
+                        Search
+                    </button>
+                </div>
+            </form>
+
 <h2 class="pageHeading"> Featured </h2>
 
     <div class="recipeSection"> 
@@ -19,7 +30,7 @@ include_once __DIR__ . '/_components/header.php';
         
             <div class="recipeCard">
                     
-                <img class="recipeImage" src="real-final/images/grilled-brie-mushroom-sandwich.jpg">
+                <img class="recipeImage" src="<?php echo site_url(); ?>/dist/images/grilled-brie-mushroom-sandwich.jpg" >
                 <div class="recipeInfo">
                 <h2 class="recipeName"> Mushroom & Brie Melt on Sourdough </h2>
                 <p class="rating"> ★★★★★  (40)</p>
