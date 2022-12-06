@@ -2,6 +2,9 @@
 include_once __DIR__ . '/../../app.php';
 $page_title = 'All Recipes';
 include_once __DIR__ . '/../../_components/header.php';
+
+$recipes = get_recipes();
+
 ?>
 
 <!-- <h2 class="pageHeading"> All Recipes </h2>
@@ -40,46 +43,40 @@ $result = mysqli_query($db_connection, $query);
   <div class="adminViewAll">
     <div class="adminViewAll_TopSec">
       <div class="header center">
-        <h1>All Recipes</h1>
+        <h2 class="pageHeading"> All Recipes </h2>
         <hr>
       </div>
 
 
-      <button class="addRecipeButton">  Add a Recipe <img class="addRecipeIcon" src=" <?php echo site_url(); ?>/dist/images/plus_circle_outline.svg"> </button>
+      <a href='https://www.karajbutler.com/idm232/final/_includes/add-recipe.php'> <button class="addRecipeButton">  Add a Recipe <img class="addRecipeIcon" src=" <?php echo site_url(); ?>/dist/images/plus_circle_outline.svg"> </button></a>
 
       <form action="" method="GET">
         <input type="text" name = "Search">
         <button type="submit"> Search </button> 
       </form>
 
-    <div class="adminTable">
-      <!-- <div class="">
-        <div class=""> -->
-          <div class="">
-            <table class="">
-              <thead class="">
-                <!-- <tr>
-                  <th scope="col" class="">Name of Recipe</th>
-                </tr> -->
-              </thead>
-              <tbody class="">
-                <?php
-                 $site_url = site_url();
-                  while ($recipes = mysqli_fetch_array($result)) {
-                    echo "<tr>
-                      <td class='recipeName'>{$recipes['recipe_name']}</td>
-                      <td class='recipeButtons'>
-                        <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}' class=''>Edit</a>
-                        <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}' class=''>Delete</a>
-                      </td>
-                    </tr>";
-                  }
-                 ?>
-              </tbody>
-            </table>
-          </div>
-        <!-- </div>
-      </div> -->
+
+    <div class="recipeTable">
+      <div>
+        <table>
+          <tbody>
+            <?php
+              $site_url = site_url();
+              while ($recipes = mysqli_fetch_array($result)) {
+                echo "<tr class='allRecipesBlock'>
+                  <td class='allRecipesImage'>{$recipes['image_path']}</td>
+                  <td class='allRecipesName'>{$recipes['recipe_name']}</td>
+                  <td class='allRecipesDescription'>{$recipes['description']} </td> 
+                  <td class='allRecipesButtons'>
+                    <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}'><img src=' <?php echo site_url(); ?>/dist/images/edit-icon.svg'></a>
+                    <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}' class=''>Delete</a>
+                  </td>
+                </tr>";
+              }
+              ?>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
  

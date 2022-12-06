@@ -9,13 +9,13 @@ include_once __DIR__ . '/_components/header.php';
 
 
     <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
-                <div>
-                    <input class="searchText" type="text" placeholder="Search..." name="search">
-                    <button class="searchButtonSec">
-                        Search
-                    </button>
-                </div>
-            </form>
+        <div>
+            <input class="searchText" type="text" placeholder="Search..." name="search">
+            <button class="searchButtonSec">
+                Search
+            </button>
+        </div>
+    </form>
 
 <h2 class="pageHeading"> Featured </h2>
 

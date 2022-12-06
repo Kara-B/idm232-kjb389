@@ -8,14 +8,15 @@ if (!$_POST) {
 // Store $_POST data to variables for readability
 
 $id = $_POST['id'];
-$recipe_name_value = $_POST['recipe_name'];
-$cook_time_value = $_POST['cook_time'];
-$prep_time_value = $_POST['prep_time'];
-$total_time_value = $_POST['total_time'];
-$serving_size_value = $_POST['serving_size'];
-$description_value = $_POST['description'];
-$ingredients_value = $_POST['ingredients'];
-$instructions_value = $_POST['instructions'];
+$recipe_name_value = sanitize_value($_POST['recipe_name']);
+$cook_time_value = sanitize_value($_POST['cook_time']);
+$prep_time_value = sanitize_value($_POST['prep_time']);
+$total_time_value = sanitize_value($_POST['total_time']);
+$serving_size_value = sanitize_value($_POST['serving_size']);
+$description_value = sanitize_value($_POST['description']);
+$ingredients_value = sanitize_value($_POST['ingredients']);
+$instructions_value = sanitize_value($_POST['instructions']);
+$image_path_value = sanitize_value($_POST['image_path']);
 
 
 
@@ -28,7 +29,8 @@ $query = "UPDATE recipes SET
      serving_size = '{$serving_size_value}',
      description = '{$description_value}', 
      ingredients = '{$ingredients_value}', 
-     instructions = '{$instructions_value}' 
+     instructions = '{$instructions_value}',
+     image_path = '{$image_path_value}'
 WHERE id = {$id}";
 
 // Run the SQL statement

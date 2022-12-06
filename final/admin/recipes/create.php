@@ -41,26 +41,33 @@ $result = mysqli_query($db_connection, $query);
         <input type="number" name="serving_size">
     </div>
 
-    <div class="addrecipeInput js-tinymce">
+    <div class="addrecipeInput">
         <label for=""> Description </label>
-        <textarea type="text" name="description"> </textarea>
+        <textarea class="js-tinymce" name="description"> </textarea>
     </div>
 
-    <div class="addrecipeInput js-tinymce">
+    <div class="addrecipeInput">
         <label for=""> Ingredients </label>
-        <input type="text" name="ingredients">
+        <textarea class="js-tinymce" name="ingredients"></textarea>
     </div>
 
-    <div class="addrecipeInput js-tinymce">
+    <div class="addrecipeInput">
         <label for=""> Instructions </label>
-        <input type="text" name="instructions">
+        <textarea class="js-tinymce"  name="instructions"> </textarea>
     </div>
+
+    <div class="addrecipeInput">
+        <label for=""> Image </label>
+        <input type="text" name="image_path">
+    </div>
+
     <input type="submit" value="Submit Recipe">
 </form>
 
 </div>
 
 
-<?php include_once __DIR__ . '/../../_components/footer.php';
+<?php include_once __DIR__ . '/../../_components/footer.php' ;
+?>
 
 

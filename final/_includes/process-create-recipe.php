@@ -6,14 +6,15 @@ if (!$_POST) {
 }
 
 // Store $_POST data to variables for readability
-$recipe_name_value = $_POST['recipe_name'];
-$cook_time_value = $_POST['cook_time'];
-$prep_time_value = $_POST['prep_time'];
-$total_time_value = $_POST['total_time'];
-$serving_size_value = $_POST['serving_size'];
-$description_value = $_POST['description'];
-$ingredients_value = $_POST['ingredients'];
-$instructions_value = $_POST['instructions'];
+$recipe_name_value = sanitize_value($_POST['recipe_name']);
+$cook_time_value = sanitize_value($_POST['cook_time']);
+$prep_time_value = sanitize_value($_POST['prep_time']);
+$total_time_value = sanitize_value($_POST['total_time']);
+$serving_size_value = sanitize_value($_POST['serving_size']);
+$description_value = sanitize_value($_POST['description']);
+$ingredients_value = sanitize_value($_POST['ingredients']);
+$instructions_value = sanitize_value($_POST['instructions']);
+$image_path_value = sanitize_value($_POST['image_path']);
 
 $result = add_recipe(
     $recipe_name_value,
@@ -23,14 +24,15 @@ $result = add_recipe(
     $serving_size_value, 
     $description_value,
     $ingredients_value,
-    $instructions_value
+    $instructions_value,
+    $image_path_value
 );
 
 // Check there are no errors with our SQL statement
 if ($result) {
     redirect_to('/admin/recipes/index.php');
 } else {
-    $error_message = 'Sorry there was an error creating the recipe';
+    $error_message = 'Sorry, there was an error creating the recipe';
     redirect_to('/admin/users?error=' . $error_message);
 }
 

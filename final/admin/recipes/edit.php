@@ -77,6 +77,12 @@ if ($result->num_rows > 0) {
                     value="<?php echo $recipes['instructions']; ?>">
             </div>
 
+            <div class="addrecipeInput">
+                <label for=""> Image </label>
+                <input type="text" name="image_path" 
+                value="<?php echo $recipes['image_path']; ?>">
+            </div>
+
             <input type="submit" value="Update">
 
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
