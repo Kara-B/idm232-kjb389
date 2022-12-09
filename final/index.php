@@ -3,7 +3,10 @@ include_once __DIR__ . '/app.php';
 $page_title = 'Home';
 include_once __DIR__ . '/_components/header.php';
 ?>
+
+
     <div class="hero">
+        <!-- <h1> Where Simple meets Fresh. </h1> -->
         <img  src=" <?php echo site_url(); ?>/dist/images/banh-mi-with-grilled-pork.jpg" alt="Tasty Times Banner" >
     </div> 
 
@@ -52,10 +55,10 @@ include_once __DIR__ . '/_components/header.php';
 
     <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
         <div>
-            <input class="searchText" type="text" placeholder="Search..." name="search">
             <button class="searchButtonSec">
                 Search
             </button>
+            <input class="searchText" type="text" placeholder="Search..." name="search">
         </div>
     </form>
 

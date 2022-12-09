@@ -29,9 +29,10 @@ $recipes = get_recipes();
 
 <?php
 // get users data from database
-$query = 'SELECT * FROM recipes';
+// $query = 'SELECT * FROM recipes';
+// $result = mysqli_query($db_connection, $query);
+$query = 'SELECT * FROM recipes ORDER BY recipe_name ASC';
 $result = mysqli_query($db_connection, $query);
-
 ?>
 
 

@@ -15,9 +15,9 @@ function add_recipe($recipe_name, $cook_time, $prep_time, $total_time, $serving_
 function get_recipes()
 {
     global $db_connection;
-    $query = 'SELECT * FROM services';
-    $result = mysqli_query($db_connection, $query);
     $query = 'SELECT * FROM recipes ORDER BY title ASC';
+    $result = mysqli_query($db_connection, $query);
+  
     return $result;
 }
 ?> 

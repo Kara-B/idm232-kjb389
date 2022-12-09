@@ -61,20 +61,18 @@ if ($result->num_rows > 0) {
 
             <div class="addrecipeInput">
                 <label for="">Description</label>
-                <input type="text" name="description"
-                    value="<?php echo $recipes['description']; ?>">
+                <textarea class="js-tinymce" name="description"><?php echo $recipes['description']; ?> </textarea>
             </div>
 
             <div class="addrecipeInput">
                 <label for="">Ingredients</label>
-                <input type="text" name="ingredients"
-                    value="<?php echo $recipes['ingredients']; ?>">
+                <textarea class="js-tinymce" name="ingredients"><?php echo $recipes['ingredients']; ?></textarea>
             </div>
 
             <div class="addrecipeInput">
                 <label for="">Instructions</label>
-                <input type="text" name="instructions"
-                    value="<?php echo $recipes['instructions']; ?>">
+                <textarea class="js-tinymce"  name="instructions"> <?php echo $recipes['instructions']; ?> </textarea>
+
             </div>
 
             <div class="addrecipeInput">
@@ -86,7 +84,7 @@ if ($result->num_rows > 0) {
             <input type="submit" value="Update">
 
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-            /dist/images/recipe-images/
+    
         </form>
         
     </div>

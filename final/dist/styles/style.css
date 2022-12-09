@@ -11,7 +11,9 @@ h3,
 h4,
 h5,
 h6,
-p,
+p{
+  font-family: Lucida-Grande;
+}
 blockquote,
 pre,
 a {
@@ -129,6 +131,20 @@ table {
   --tasty-red: #D03A31;
 }
 
+@font-face {
+  font-family: Lucida-Grande;
+  src: url(../fonts/Lucida-Grande.woff2) format('woff2');
+  font-weight: normal ;
+  font-size: normal;
+}
+
+@font-face {
+  font-family: Lucida-Grande-Bold;
+  src: url(../fonts/Lucida-Grande-Bold.woff2) format('woff2');
+  font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
 
 * {
@@ -144,16 +160,21 @@ header {
   padding: 2rem;
   max-width: 100%;
   margin: 0 0 1.5rem 0;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
 }
 
 img.headerLogo {
   position: absolute;
-  top:7%;
+  top: 6%;
   left: 45%;
   width: 200px;
+  z-index: 1;
 }
 
 .pageHeading {
+  font-family: 'Orelega One', cursive;
   font-size: 2rem;
   text-decoration: underline;
   margin: 2rem;
@@ -163,9 +184,10 @@ img.headerLogo {
 .menuItem {
   border-bottom: 4px solid var(--tasty-red);
   color: white;
+  font-family: Lucida-Grande;
+  font-size: 1.5rem;
   padding: 4px 0;
   margin: 0 20px;
-  font-size: 1.5rem;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -180,13 +202,23 @@ img.headerLogo {
   justify-self: end;
 }
 
-
 .hero img {
   filter: opacity(60%);
   height: 419px;
   width: 100%;
   object-fit: cover;
   margin-top: -1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Orelega One';
+  font-size: 3rem;
+  color: rgb(248, 40, 40);
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  text-shadow: 2px 4px 3px rgba(255, 255, 255, 0.3);
+  z-index: 1;
 }
 
 .recipeSection {
@@ -213,6 +245,11 @@ img.headerLogo {
   width: 100%;
   height: 300px;
   object-fit: cover;
+}
+
+.recipeName{
+  font-size: 1.4rem;
+  padding: .5rem;
 }
 
 footer {
@@ -257,32 +294,50 @@ footer {
 
 .recipeTop {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 16.65% 16.65% 16.65% 16.65% 16.65% 16.65%;
-  align-items: center;
-  margin-top: 2rem;
+  grid-template-rows: 50px 50px 50px 50px ;
+  background-color:#b88a8aeb;
+
+  width: 100%;
 }
 
 .recipeDescriptionImage {
   justify-self: center;
-  max-width: 90%;
-  grid-row: 2 / 6;
-  grid-column-start: 2;
+  max-width: 500px;
+  height: 350px;
+  object-fit: cover;
+  grid-row: 1 / 6;
+  grid-column: 1/2;
 }
 
 .recipeStats {
   grid-column: 3/6;
-  grid-row: 3 / 6;
+  grid-row: 1 / 6;
   margin: 1rem;
+  align-self: center;
 }
 
 .recipeStats p {
-  grid-column: 3/5;
+  font-size: 1.285rem;
+}
+
+.recipeStats h4 {
+  display: flex;
+  line-height: 1.5rem;
+  background-color: var(--tasty-red);
+  border-radius: 30px;
+  color: white;
+  width: fit-content;
+  margin:.8rem;
+  padding: .5rem;
 }
 
 .recipeStats h2 {
-  font-family: 'Orelega One', cursive;
+  font-family: 'Lucida-Grande';
+  font-size: 3rem;;
   grid-column: 2/5;
+  color: white;
+  text-shadow: -2px 3px 0px rgba(237, 26, 26, 0.455);
+  width: 800px;
 }
 
 .recipeIngredients {
@@ -295,16 +350,14 @@ footer {
 .recipeIngredients h4 {
   font-family: 'Orelega One', cursive;
   font-size: 1.2rem;
-
+  margin: .8rem;
 }
 
-.recipeIngredients ul {
+.recipeIngredients li {
   line-height: 1.5rem;
+  list-style: circle;
 }
-.recipeInstructions ul li{
-  line-height: 1.5rem;
-  list-style: none;
-}
+
 
 .recipeMiddle {
   display: grid;
@@ -328,10 +381,6 @@ footer {
 
 }
 
-.recipeInstructions span {
-  font-size: 2.5rem;
-  margin: 2rem 0;
-} 
 
 
 /* Add a Recipe Styles */
@@ -344,6 +393,7 @@ footer {
   padding: .5rem 1rem;
   margin: 8px 0;
   border: 2px solid black;
+  width: 500px;
 }
 
 
@@ -453,6 +503,42 @@ input[type=submit]{
   grid-row: 1/1;
   justify-content: end;
 }
+
+/* Search Recipes */
+
+.recipeTemplate {
+  align-items: center;
+  display: grid;  
+  height: 233px;
+  background-color:#FAFAFA;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  grid-template-columns: 33.3% 66.6%;
+  grid-template-rows: 33.3% 66.6%;
+  margin: 1rem;
+  width: 500px;
+
+}
+
+.recipeTemplateImage {
+  grid-column: 1/1;
+  grid-row: 1/2;
+  width: 150px;
+  height: 233px;
+  margin-top: 10rem;
+  object-fit: cover;
+
+  
+}
+
+.recipeTemplateDescription {
+  grid-column: 2/2;
+  padding: 0 1rem 0 0;
+}
+
+.allGrid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 
 /* Responsive */

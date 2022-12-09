@@ -25,10 +25,10 @@ if (!isset($result)) {
     while ($recipes = mysqli_fetch_array($result)) {
         echo "
         <div class='recipeTop'>
+
         <img class='recipeDescriptionImage' src='{$site_url}{$recipes['image_path']}' alt='recipe image'>
             <div class='recipeStats'>
                 <h2 class=''>{$recipes['recipe_name']}</h2>
-                <h3> ★★★★  (40) </h3>
                 <h4> Prep Time: {$recipes['prep_time']} </h4>
                 <h4> Cook Time: {$recipes['cook_time']} </h4>
                 <h4> Total Time: {$recipes['total_time']} </h4>

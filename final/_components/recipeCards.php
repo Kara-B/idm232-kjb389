@@ -8,16 +8,18 @@ if (!isset($result)) {
     $site_url = site_url();
     while ($recipe = mysqli_fetch_array($result)) {
         echo "
-        <a href='{$site_url}/recipeDetail.php?id={$recipe['id']}' class=''>
-            <div class=''>
-            <img class='' width='100px' height='100px' src='{$recipe['image_path']}' alt=''>
-                <div class=''>
-                    <p class=''>{$recipe['recipe_name']}</p>
-                    <p class=''>{$recipe['description']}</p>
-                </div> 
-
-            </div>
-        </a>
+        <div>
+          
+           
+                    <a href='{$site_url}/recipeDetail.php?id={$recipe['id']}' class='recipeTemplate'>
+                    <img class='recipeTemplateImage' width='100px' height='100px' src='{$site_url}{$recipe['image_path']}' alt=''>
+                    <p class='recipeTemplateName'>{$recipe['recipe_name']}</p>
+                    <p class=' recipeTemplateDescription'>{$recipe['description']}</p>
+                    </a>
+            
+         
+        </div>
+        
         ";
     }
 ?>

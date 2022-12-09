@@ -60,12 +60,12 @@
         while ($recipes_results = mysqli_fetch_assoc($results)) {
           echo "
           <a href='{$site_url}/recipeDetail.php?id={$recipes_results['id']}' >
-              <div class=''>
-              <img class='' width='100px' height='100px' src='{$site_url}{$recipes_results['image_path']}' alt=''>
-                  <div class=''>
-                      <p class=''>{$recipes_results['recipe_name']}</p>
-                      <p class=''>{$recipes_results['description']}</p>
-                  </div> 
+              <div class=' allRecipesBlock'>
+              <div class='allRecipesImage' > 
+                <img width='200px' height='150px' src='{$site_url}{$recipes_results['image_path']}' alt=''>
+              </div>
+              <p class='allRecipesName'>{$recipes_results['recipe_name']}</p>
+              <p class='allRecipesDescription'>{$recipes_results['description']}</p>
 
               </div>
           </a>

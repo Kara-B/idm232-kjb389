@@ -14,16 +14,13 @@ $result = mysqli_query($db_connection, $query);
 ?>
 
 
-    <div class="">
-        <h1 class="">All Recipes</h1>
-    </div>
 
+     <h2 class="pageHeading">All Recipes</h2>
 
-<div class="">
-    <div class="">
+    <div class="allGrid">
         <?php include __DIR__ . '/_components/recipeCards.php'; ?>
     </div>
-</div>
+
 
 
 <?php include_once __DIR__ . '/_components/footer.php';
