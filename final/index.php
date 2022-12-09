@@ -8,15 +8,6 @@ include_once __DIR__ . '/_components/header.php';
     </div> 
 
 
-    <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
-        <div>
-            <input class="searchText" type="text" placeholder="Search..." name="search">
-            <button class="searchButtonSec">
-                Search
-            </button>
-        </div>
-    </form>
-
 <h2 class="pageHeading"> Featured </h2>
 
     <div class="recipeSection"> 
@@ -57,6 +48,17 @@ include_once __DIR__ . '/_components/header.php';
             
             </div>
     </div>
+
+
+    <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
+        <div>
+            <input class="searchText" type="text" placeholder="Search..." name="search">
+            <button class="searchButtonSec">
+                Search
+            </button>
+        </div>
+    </form>
+
 
 
 <?php include_once __DIR__ . '/_components/footer.php';

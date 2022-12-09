@@ -18,27 +18,27 @@ $result = mysqli_query($db_connection, $query);
     <h2 class="pageHeading"> Add A Recipe </h2>
     <div class="addrecipeInput">
         <label for=""> Recipe Name</label>
-        <input type="text" name="recipe_name">
+        <input class="userInput" type="text" name="recipe_name">
     </div>
 
     <div class="addrecipeInput">
         <label for=""> Cook Time</label>
-        <input type="text" name="cook_time">
+        <input class="userInput" type="text" name="cook_time">
     </div>
 
     <div class="addrecipeInput">
         <label for=""> Prep Time</label>
-        <input type="text" name="prep_time">
+        <input class="userInput" type="text" name="prep_time">
     </div>
 
     <div class="addrecipeInput">
         <label for=""> Total Time</label>
-        <input type="text" name="total_time">
+        <input class="userInput" type="text" name="total_time">
     </div>
 
     <div class="addrecipeInput">
         <label for=""> Serving Size</label>
-        <input type="number" name="serving_size">
+        <input class="userInput" type="number" name="serving_size">
     </div>
 
     <div class="addrecipeInput">
@@ -58,7 +58,7 @@ $result = mysqli_query($db_connection, $query);
 
     <div class="addrecipeInput">
         <label for=""> Image </label>
-        <input type="text" name="image_path">
+        <input class="userInput" type="text" name="image_path">
     </div>
 
     <input type="submit" value="Submit Recipe">

@@ -31,31 +31,31 @@ if ($result->num_rows > 0) {
 
             <div class="addrecipeInput">
                 <label for="">Recipe Name</label>
-                <input type="text" name="recipe_name"
+                <input class="userInput" type="text" name="recipe_name"
                     value="<?php echo $recipes['recipe_name']; ?>">
             </div>
 
             <div class="addrecipeInput">
                 <label for="">Cook Time</label>
-                <input type="text" name="cook_time"
+                <input class="userInput" type="text" name="cook_time"
                     value="<?php echo $recipes['cook_time']; ?>">
             </div>
 
             <div class="addrecipeInput">
                 <label for="">Prep Time</label>
-                <input type="text" name="prep_time"
+                <input class="userInput" type="text" name="prep_time"
                     value="<?php echo $recipes['prep_time']; ?>">
             </div>
 
             <div class="addrecipeInput">
                 <label for=""> Total Time</label>
-                <input type="text" name="total_time"
+                <input class="userInput" type="text" name="total_time"
                     value="<?php echo $recipes['total_time']; ?>">
             </div>
 
             <div class="addrecipeInput">
                 <label for="">Servings</label>
-                <input type="text" name="serving_size"
+                <input class="userInput" type="text" name="serving_size"
                     value="<?php echo $recipes['serving_size']; ?>">
             </div>
 
@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
 
             <div class="addrecipeInput">
                 <label for=""> Image </label>
-                <input type="text" name="image_path" 
+                <input class="userInput" type="text" name="image_path" 
                 value="<?php echo $recipes['image_path']; ?>">
             </div>
 

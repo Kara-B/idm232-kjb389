@@ -1,8 +1,8 @@
 <?php
 // Make sure the path is correct for each include on this page. Delete this comment once done
-include_once DIR . '/app.php';
+include_once __DIR__ . '/app.php';
 $page_title = 'All Recipes';
-include_once DIR . '/_components/header.php';
+include_once __DIR__ . '/_components/header.php';
 ?>
 
 <?php
@@ -14,7 +14,6 @@ $result = mysqli_query($db_connection, $query);
 ?>
 
 
-
     <div class="">
         <h1 class="">All Recipes</h1>
     </div>
@@ -22,9 +21,9 @@ $result = mysqli_query($db_connection, $query);
 
 <div class="">
     <div class="">
-        <?php include DIR . '../_components/recipeCards.php'; ?>
+        <?php include __DIR__ . '/_components/recipeCards.php'; ?>
     </div>
 </div>
 
 
-<?php include_once DIR . '/_components/footer.php';
+<?php include_once __DIR__ . '/_components/footer.php';

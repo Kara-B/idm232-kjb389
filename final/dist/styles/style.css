@@ -180,14 +180,14 @@ img.headerLogo {
   justify-self: end;
 }
 
-.hero {
-  height: 419px;
-  overflow: hidden;
-}
 
 .hero img {
+  filter: opacity(60%);
+  height: 419px;
+  width: 100%;
   object-fit: cover;
-  position: inherit;
+  margin-top: -1.5rem;
+  
 }
 
 .recipeSection {
@@ -212,6 +212,8 @@ img.headerLogo {
 .recipeImage {
   display: block;
   width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
 footer {
@@ -231,6 +233,26 @@ footer {
 .footerLogo {
   width: 200px;
   margin: 1rem auto;
+}
+
+.searchBox {
+  border: 2px solid var(--tasty-red);
+  border-radius: 30px;
+  margin: 1rem auto;
+  min-width: 400px;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.searchBox input {
+  height: 2rem;
+  
+}
+.searchButtonSec {
+  background-color: var(--tasty-red);
+  color:white;
+  cursor: pointer;
+  height: 100%;
 }
 /* -------Recipe Description Styles------- */
 
@@ -318,20 +340,13 @@ footer {
 
 
 
-input[type=text] {
+.userInput {
   display: block;
   padding: .5rem 1rem;
   margin: 8px 0;
   border: 2px solid black;
 }
 
-input[type=number]{
-  display: block;
-  width: 100px;
-  padding: .5rem 1rem;
-  margin: 8px 0;
-  border: 2px solid black;
-}
 
 input[type=submit]{
   background-color: var(--tasty-red) ;
@@ -389,7 +404,7 @@ input[type=submit]{
 
 .allRecipesBlock {
   display: grid;
-  grid-template-columns: 33.3% 66.6%;
+  grid-template-columns: 33.3% 52.6% 10%;
   grid-template-rows: 33.3% 33.3% 33.3%;
   height: 150px;
   background-color:#FAFAFA;
@@ -413,7 +428,7 @@ input[type=submit]{
 }
 
 .allRecipesName {
-  font-size: 1rem;
+  font-size: 1.3rem;
   grid-row:1/1;
   grid-column: 2/2;
 }
@@ -424,8 +439,8 @@ input[type=submit]{
 
 .allRecipesDescription {
   font-size: 1rem;
-  grid-column: 2/2;
-  grid-row: 2/3;
+  grid-column: 2/4;
+  grid-row: 2/4;
   padding: 0 1rem 0 0;
 }
 

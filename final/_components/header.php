@@ -23,9 +23,9 @@ $document_title = $page_title . ' | ' . $site_title; // Home | JAWN Clips
 <body>
 
   <header> 
-        <h2 class="menuItem"> <a href="https://www.karajbutler.com/idm232/final/_includes/add-recipe.php">Search</a> </h2>
-        <h2 class="menuItem"> All Recipes </h2>
-        <h2 class="menuItem menuSignIn"> Sign In </h2>
+            <h2 class="menuItem"> <a href="https://www.karajbutler.com/idm232/final/_includes/add-recipe.php">Search</a> </h2>
+            <h2 class="menuItem"> All Recipes </h2>
+        <h2 class="menuItem menuSignIn"> Admin </h2>
         <img  src=" <?php echo site_url(); ?>/dist/images/Tasty-Times-Logo.svg" alt="Tasty Times Logo" >
     </header>
 
