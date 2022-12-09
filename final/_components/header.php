@@ -23,10 +23,10 @@ $document_title = $page_title . ' | ' . $site_title; // Home | JAWN Clips
 <body>
 
   <header> 
-            <h2 class="menuItem"> <a href="https://www.karajbutler.com/idm232/final/_includes/add-recipe.php">Search</a> </h2>
-            <h2 class="menuItem"> All Recipes </h2>
-        <h2 class="menuItem menuSignIn"> Admin </h2>
-        <img  src=" <?php echo site_url(); ?>/dist/images/Tasty-Times-Logo.svg" alt="Tasty Times Logo" >
+            <h2 class="menuItem"> <a href="https://www.karajbutler.com/idm232/final/admin/search/index.php">Search</a> </h2>
+            <h2 class="menuItem"> <a href="https://www.karajbutler.com/idm232/final/view-all.php"></a>All Recipes </h2>
+        <h2 class="menuItem menuSignIn"> <a href="https://www.karajbutler.com/idm232/final/admin/recipes/index.php"></a>Admin </h2>
+        <img class="headerLogo" src=" <?php echo site_url(); ?>/dist/images/Tasty-Times-Logo.svg" alt="Tasty Times Logo" >
     </header>
 
       <!-- Main Content Begins -->

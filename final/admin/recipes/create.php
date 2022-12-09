@@ -58,7 +58,7 @@ $result = mysqli_query($db_connection, $query);
 
     <div class="addrecipeInput">
         <label for=""> Image </label>
-        <input class="userInput" type="text" name="image_path">
+        <input class="userInput" type="text" name="image_path" > /dist/images/recipe-images/ </input>
     </div>
 
     <input type="submit" value="Submit Recipe">

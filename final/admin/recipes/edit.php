@@ -86,6 +86,7 @@ if ($result->num_rows > 0) {
             <input type="submit" value="Update">
 
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+            /dist/images/recipe-images/
         </form>
         
     </div>
