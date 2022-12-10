@@ -48,11 +48,15 @@ $result = mysqli_query($db_connection, $query);
   </div>
 
 
-  <a href='https://www.karajbutler.com/idm232/final/_includes/add-recipe.php'> <button class="addRecipeButton">  Add a Recipe <img class="addRecipeIcon" src=" <?php echo site_url(); ?>/dist/images/plus_circle_outline.svg"> </button></a>
+  <a href='https://www.karajbutler.com/idm232/final/admin/recipes/create.php'> <button class="addRecipeButton">  Add a Recipe <img class="addRecipeIcon" src=" <?php echo site_url(); ?>/dist/images/plus_circle_outline.svg"> </button></a>
 
-  <form action="" method="GET">
-    <input type="text" name = "Search">
-    <button type="submit"> Search </button> 
+  <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
+        <div>
+            <button class="searchButtonSec">
+            <iconify-icon class="iconifyBs" icon="cil:magnifying-glass" width="30" height="30"></iconify-icon>
+            </button>
+            <input class="searchText" type="text" placeholder="Search..." name="search">
+        </div>
   </form>
     
 

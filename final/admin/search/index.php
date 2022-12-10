@@ -29,32 +29,32 @@
 ?>
 
 
-  <div>
-    <div>
-      <h1> Search Results </h1>
-      <form action="<?php echo site_url(); ?>/admin/search" method="GET">
-        <input type="text" name="search" id="search" placeholder="Search"
-          value="<?php echo $search; ?>">
-        <button type="submit">Search</button>
-      </form>
-      <h2>You searched for "<?php echo $search; ?>"</h2>
-      <?php
-      // If no results, echo no results
-      if (!$recipes_results) {
-          echo '<p>No results found</p>';
-      }
-      ?>
-
-
-  <?php
-  // If error query param exist, show error message
-    if (isset($_GET['error'])) {
-        echo '<p>' . $_GET['error'] . '</p>';
+<div>
+  <div class="recipeTable">
+    <h2 class="pageHeading"> Search Results </h2>
+    <form class="searchBox" action="<?php echo site_url(); ?>/admin/search" method="GET">
+      <iconify-icon class="iconifyBs" icon="cil:magnifying-glass" width="30" height="30"></iconify-icon>
+      <input class="searchText" type="text" name="search" id="search" placeholder="Search"
+        value="<?php echo $search; ?>">
+    </form>
+    <h2>You searched for "<?php echo $search; ?>"</h2>
+    <?php
+    // If no results, echo no results
+    if (!$recipes_results) {
+        echo '<p>No results found</p>';
     }
-  ?>
+    ?>
 
 
-  <?php
+    <?php
+    // If error query param exist, show error message
+      if (isset($_GET['error'])) {
+          echo '<p>' . $_GET['error'] . '</p>';
+      }
+    ?>
+
+
+    <?php
     $site_url = site_url();
     if ($recipes_results) {
         while ($recipes_results = mysqli_fetch_assoc($results)) {
@@ -66,13 +66,12 @@
               </div>
               <p class='allRecipesName'>{$recipes_results['recipe_name']}</p>
               <p class='allRecipesDescription'>{$recipes_results['description']}</p>
-
               </div>
           </a>
       ";
         }
     }
-  ?>
+    ?>
   </div>
 </div>
 
