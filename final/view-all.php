@@ -16,7 +16,7 @@ $result = mysqli_query($db_connection, $query);
 
 
      <h2 class="pageHeading">All Recipes</h2>
-
+     
     <div class="allGrid">
         <?php include __DIR__ . '/_components/recipeCards.php'; ?>
     </div>

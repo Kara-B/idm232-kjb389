@@ -48,7 +48,7 @@ $result = mysqli_query($db_connection, $query);
   </div>
 
 
-  <a href='https://www.karajbutler.com/idm232/final/admin/recipes/create.php'> <button class="addRecipeButton">  Add a Recipe <img class="addRecipeIcon" src=" <?php echo site_url(); ?>/dist/images/plus_circle_outline.svg"> </button></a>
+  <a class="addRecipeButton" href='https://www.karajbutler.com/idm232/final/admin/recipes/create.php'>  Add a Recipe <img class="addRecipeIcon" src=" <?php echo site_url(); ?>/dist/images/plus_circle_outline.svg"> </a>
 
   <form class="searchBox" action= "<?php echo site_url(); ?>/admin/search" method="GET">
         <div>
@@ -62,30 +62,30 @@ $result = mysqli_query($db_connection, $query);
 
 
   <div class="recipeTable">
-  <div>
-    <table>
-      <tbody>
-        <?php
-          $site_url = site_url();
-          while ($recipes = mysqli_fetch_array($result)) {
-            echo "
-            <tr class='allRecipesBlock'>
-              <td class='allRecipesImage'> <img src='{$site_url}/{$recipes['image_path']}' width='200px' height='150px' alt=''> </td> 
-              <td class='allRecipesName'>{$recipes['recipe_name']}</td>
-              <td class='allRecipesDescription'>{$recipes['description']} </td> 
-              <td class='allRecipesButtons'>
-                <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}'> <img src='/final/dist/images/edit-icon.svg'></a>
-                <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}'> <img src='/final/dist/images/delete-icon.svg'></a>
-              </td>
-            </tr>
-            ";
+    <div>
+      <table>
+        <tbody>
+          <?php
+            $site_url = site_url();
+            while ($recipes = mysqli_fetch_array($result)) {
+              echo "
+              <tr class='allRecipesBlock'>
+                <td class='allRecipesImage'> <img src='{$site_url}/{$recipes['image_path']}' width='200' height='150' alt=''> </td> 
+                <td class='allRecipesName'>{$recipes['recipe_name']}</td>
+                <td class='allRecipesDescription'>{$recipes['description']} </td> 
+                <td class='allRecipesButtons'>
+                  <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}'> <img src='/final/dist/images/edit-icon.svg' alt=''></a>
+                  <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}'> <img src='/final/dist/images/delete-icon.svg' alt=''></a>
+                </td>
+              </tr>
+              ";
 
-          }
-          ?>
-      </tbody>
-    </table>
+            }
+            ?>
+        </tbody>
+      </table>
+    </div>
   </div>
-
 </div>
 
 

@@ -17,47 +17,47 @@ $result = mysqli_query($db_connection, $query);
 
     <h2 class="pageHeading"> Add A Recipe </h2>
     <div class="addrecipeInput">
-        <label for=""> Recipe Name</label>
+        <label for="recipe name input"> Recipe Name</label>
         <input class="userInput" type="text" name="recipe_name">
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Cook Time</label>
+        <label for=" recipe cook time "> Cook Time</label>
         <input class="userInput" type="text" name="cook_time">
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Prep Time</label>
+        <label for="prep time "> Prep Time</label>
         <input class="userInput" type="text" name="prep_time">
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Total Time</label>
+        <label for=" total time "> Total Time</label>
         <input class="userInput" type="text" name="total_time">
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Serving Size</label>
+        <label for=" servings "> Servings </label>
         <input class="userInput" type="number" name="serving_size">
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Description </label>
+        <label for=" description "> Description </label>
         <textarea class="js-tinymce" name="description"> </textarea>
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Ingredients </label>
+        <label for=" ingredients "> Ingredients </label>
         <textarea class="js-tinymce" name="ingredients"></textarea>
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Instructions </label>
+        <label for=" instructions "> Instructions </label>
         <textarea class="js-tinymce"  name="instructions"> </textarea>
     </div>
 
     <div class="addrecipeInput">
-        <label for=""> Image </label>
+        <label for=" image path"> Image </label>
         <input class="userInput" type="text" name="image_path" > 
     </div>
 

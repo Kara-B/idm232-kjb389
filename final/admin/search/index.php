@@ -62,7 +62,7 @@
           <a href='{$site_url}/recipeDetail.php?id={$recipes_results['id']}' >
               <div class=' allRecipesBlock'>
               <div class='allRecipesImage' > 
-                <img width='200px' height='150px' src='{$site_url}{$recipes_results['image_path']}' alt=''>
+                <img width='200' height='150' src='{$site_url}{$recipes_results['image_path']}' alt=''>
               </div>
               <p class='allRecipesName'>{$recipes_results['recipe_name']}</p>
               <p class='allRecipesDescription'>{$recipes_results['description']}</p>

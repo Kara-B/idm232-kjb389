@@ -15,7 +15,7 @@ include_once __DIR__ . '/_components/header.php';
 
     <div class="recipeSection"> 
         <div class="recipeCard">
-            <img class="recipeImage" src="https://apleasantlittlekitchen.com/wp-content/uploads/2020/09/pizza-cut-1-of-1.jpg">
+            <img class="recipeImage" src="https://apleasantlittlekitchen.com/wp-content/uploads/2020/09/pizza-cut-1-of-1.jpg" alt="">
             <div class="recipeInfo">
                 <h2 class="recipeName"> Burrata & Proscuitto Pizza with Basil </h2>
                 <p class="rating"> ★★★★★  (40)</p>
@@ -24,7 +24,7 @@ include_once __DIR__ . '/_components/header.php';
         
             <div class="recipeCard">
                     
-                <img class="recipeImage" src="<?php echo site_url(); ?>/dist/images/grilled-brie-mushroom-sandwich.jpg" >
+                <img class="recipeImage" src="<?php echo site_url(); ?>/dist/images/grilled-brie-mushroom-sandwich.jpg" alt="">
                 <div class="recipeInfo">
                 <h2 class="recipeName"> Mushroom & Brie Melt on Sourdough </h2>
                 <p class="rating"> ★★★★★  (40)</p>
@@ -33,7 +33,7 @@ include_once __DIR__ . '/_components/header.php';
             </div>
 
             <div class="recipeCard">   
-                <img class="recipeImage" src="https://www.dinneratthezoo.com/wp-content/uploads/2017/11/caprese-skewers-4.jpg">
+                <img class="recipeImage" src="https://www.dinneratthezoo.com/wp-content/uploads/2017/11/caprese-skewers-4.jpg" alt="">
                 <div class="recipeInfo">
                 <h2 class="recipeName"> Caprese Skewers with Balsamic glaze </h2>
                 <p class="rating"> ★★★★★  (40)</p>
@@ -43,7 +43,7 @@ include_once __DIR__ . '/_components/header.php';
             
             <div class="recipeCard">
                     
-                <img class="recipeImage" src="https://www.sandravalvassori.com/wp-content/uploads/2021/10/butternut-squash-soup-7592.jpg">
+                <img class="recipeImage" src="https://www.sandravalvassori.com/wp-content/uploads/2021/10/butternut-squash-soup-7592.jpg" alt="">
                 <div class="recipeInfo">
                 <h2 class="recipeName"> Caprese Skewers with Balsamic glaze </h2>
                 <p class="rating"> ★★★★★  (40)</p>
